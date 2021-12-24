@@ -1,0 +1,53 @@
+{
+  "compilerOptions": {
+    // 指定ECMAScript目标版本 
+    "target": "ESnext",
+    // 指定生成哪个模块系统代码
+    "module": "ESnext",
+    // jsx,tsx解析
+    "jsx": "preserve",
+    // 启用所有严格类型检查选项
+    "strict": true,
+    // 从 tslib 导入辅助工具函数
+    "importHelpers": true,
+    // 决定如何处理模块。
+    "moduleResolution": "node",
+    // 启用实验性的ES装饰器。
+    "experimentalDecorators": true,
+    // 允许从没有设置默认导出的模块中默认导入。这并不影响代码的输出，仅为了类型检查。
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    // 阻止 --noImplicitAny对缺少索引签名的索引对象报错。
+    "suppressImplicitAnyIndexErrors": true,
+    // 生成相应的 .map文件。
+    "sourceMap": true,
+    // 解析非相对模块名的基准目录。
+    "baseUrl": ".",
+    // 模块名到基于 baseUrl的路径映射的列表。
+    "paths": {
+      "@/*": [
+        "src/*"
+      ],
+      "@blog-admin/*": [
+        "entries/blog-admin/*"
+      ],
+      "@blog-front/*": [
+        "entries/blog-front/*"
+      ]
+    },
+    // 编译过程中需要引入的库文件的列表。
+    "lib": [
+      "esnext",
+      "dom",
+    ]
+  },
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.vue",
+    "entries/**/*.ts",
+    "entries/**/*.vue"
+  ],
+  "exclude": [
+    "node_modules",
+  ]
+}
